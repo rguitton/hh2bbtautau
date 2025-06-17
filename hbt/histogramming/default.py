@@ -101,3 +101,8 @@ for i in range(1, len(differents_weights) + 1):
     name = f"default_drop_weights_{i}"
     cls_dict = {"drop_weights": to_drop}
     default.derive(name, cls_dict=cls_dict)
+
+
+drop_only_normalization_weight = default.derive("drop_only_normalization_weight", cls_dict={
+    "drop_weights": {"normalization_weight"},
+})
