@@ -77,6 +77,10 @@ no_trigger_weight = default.derive("no_trigger_weight", cls_dict={
     "drop_weights": {"normalization_weight_inclusive", "trigger_weight"},
 })
 
+no_tau_weight = default.derive("no_tau_weight", cls_dict={
+    "drop_weights": {"normalization_weight_inclusive", "tau_weight"},
+})
+
 
 
 differents_weights = [

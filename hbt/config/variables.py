@@ -128,7 +128,7 @@ def add_variables(config: od.Config) -> None:
         config,
         name="mc_weight",
         expression="mc_weight",
-        binning=(200, -10, 10),
+        binning=(200, -10e6, 10e6),
         x_title="MC weight",
     )
     add_variable(

@@ -135,8 +135,8 @@ def electron_selection(
             (abs(events.Electron.dz) < 0.2)
         )
 
-        # additional cut in 2022 post-EE
         # see https://twiki.cern.ch/twiki/bin/viewauth/CMS/PdmVRun3Analysis?rev=162#From_ECAL_and_EGM
+        # additional cut in 2022 post-EE
         if is_2022_post:
             default_mask = default_mask & ~(
                 (events.Electron.eta > 1.556) &
@@ -543,7 +543,7 @@ def lepton_selection(
             # channel dependent deeptau cuts vs e and mu
             ch_base_tau_mask = (
                 tau_base_mask &
-                (events.Tau[get_tau_tagger("e")] >= wp_config.tau_vs_e.vloose) &
+                (events.Tau[get_tau_tagger("e")] >= wp_config.tau_vs_e.vvloose) &
                 (events.Tau[get_tau_tagger("mu")] >= wp_config.tau_vs_mu.tight)
             )
 
