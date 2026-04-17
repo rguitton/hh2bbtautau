@@ -2302,7 +2302,8 @@ def add_config(
             fs_postfix = ""
             # ammend when located on CERN resources
             if not force_desy_resources and env_is_cern:
-                fs_postfix = "_eos"
+                pass
+                #fs_postfix = "_eos"
         elif nano_creator == "rucio":
             # rucio nano's, stored on cern eos, so postfix _eos required
             fs_postfix = "_desy"
